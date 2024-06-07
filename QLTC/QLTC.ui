@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1303</width>
-    <height>734</height>
+    <width>1130</width>
+    <height>709</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,7 +54,7 @@
       <x>230</x>
       <y>70</y>
       <width>761</width>
-      <height>151</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="font">
@@ -65,29 +65,11 @@
     <property name="title">
      <string>Thêm Thú Cưng</string>
     </property>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Mã thú cưng:</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>70</y>
+       <y>30</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -152,26 +134,11 @@
       </font>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tb_m">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>30</y>
-       <width>201</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>110</y>
+       <y>70</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -189,7 +156,7 @@
      <property name="geometry">
       <rect>
        <x>160</x>
-       <y>70</y>
+       <y>30</y>
        <width>201</width>
        <height>31</height>
       </rect>
@@ -239,7 +206,7 @@
      <property name="geometry">
       <rect>
        <x>160</x>
-       <y>110</y>
+       <y>70</y>
        <width>201</width>
        <height>31</height>
       </rect>
@@ -314,9 +281,9 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>250</y>
-      <width>391</width>
+      <x>10</x>
+      <y>200</y>
+      <width>261</width>
       <height>121</height>
      </rect>
     </property>
@@ -349,8 +316,8 @@
     <widget class="QCheckBox" name="ck_dt">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>40</y>
+       <x>120</x>
+       <y>50</y>
        <width>161</width>
        <height>31</height>
       </rect>
@@ -364,32 +331,14 @@
       <string>Đã tiêm phòng</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="ck_ct">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>70</y>
-       <width>181</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Chưa tiêm phòng</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>250</y>
-      <width>401</width>
-      <height>121</height>
+      <x>280</x>
+      <y>210</y>
+      <width>291</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
@@ -432,10 +381,10 @@
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>990</x>
-      <y>70</y>
-      <width>291</width>
-      <height>221</height>
+      <x>850</x>
+      <y>200</y>
+      <width>261</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="font">
@@ -461,13 +410,13 @@
       </font>
      </property>
      <property name="text">
-      <string>Mã thú cưng:</string>
+      <string>Tìm kiếm :</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="tb_tk">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>100</x>
        <y>70</y>
        <width>151</width>
        <height>31</height>
@@ -478,7 +427,7 @@
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>150</y>
+       <y>120</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -496,8 +445,8 @@
    <widget class="QPushButton" name="bt_t">
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>380</y>
+      <x>580</x>
+      <y>220</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -514,8 +463,8 @@
    <widget class="QPushButton" name="bt_s">
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>430</y>
+      <x>580</x>
+      <y>280</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -532,8 +481,8 @@
    <widget class="QPushButton" name="bt_x">
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>480</y>
+      <x>720</x>
+      <y>220</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -551,7 +500,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>380</y>
+      <y>360</y>
       <width>921</width>
       <height>301</height>
      </rect>
@@ -612,8 +561,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>221</width>
-      <height>241</height>
+      <width>211</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -626,8 +575,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>1130</x>
-      <y>490</y>
+      <x>940</x>
+      <y>360</y>
       <width>171</width>
       <height>191</height>
      </rect>
@@ -645,7 +594,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1303</width>
+     <width>1130</width>
      <height>21</height>
     </rect>
    </property>

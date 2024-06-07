@@ -7,28 +7,29 @@ from DBconnect import DBconnect
 class thucung:
     db = DBconnect()
     
-    def __init__(self,matc,tuoi,loai,gt,giong,gia):
+    def __init__(self,matc,tuoi,loai,gt,giong,gia,tp):
         self.matc = matc
         self.tuoi = tuoi
         self.loai = loai
         self.gt = gt
         self.giong = giong
         self.gia = gia
+        self.tp = tp
         
         
     def them(self):
-        sql = "INSERT INTO QLTC (tuoi,loai,gt,giong,gia) VALUES ("+str(self.tuoi)+",'"+str(self.loai)+"','"+str(self.gt)+"','"+str(self.giong)+"',"+str(self.gia)+")"
+        sql = "INSERT INTO QLTC (tuoi,loai,gt,giong,gia,tp) VALUES ("+str(self.tuoi)+",'"+str(self.loai)+"','"+str(self.gt)+"','"+str(self.giong)+"',"+str(self.gia)+",'"+str(self.tp)+"')"
         thucung.db.update(sql)
     
     def sua(self):
-        sql = "UPDATE QLTC SET tuoi = "+str(self.tuoi)+", loai ='"+str(self.loai)+"',gt = '"+str(str(self.gt))+"' , giong = '"+str(self.giong)+"',gia = "+str(self.gia)+" WHERE matc = "+str(self.matc)+""
+        sql = "UPDATE QLTC SET tuoi = "+str(self.tuoi)+", loai ='"+str(self.loai)+"',gt = '"+str(str(self.gt))+"' , giong = '"+str(self.giong)+"',gia = "+str(self.gia)+", tp = '"+str(self.tp)+"' WHERE matc = "+str(self.matc)+""
         thucung.db.update(sql)
         
-    def xoa(self):
-        sql = "DELETE FROM QLTC WHERE matc = "+str(self.matc)+""
+    def xoa(matc):
+        sql = "DELETE FROM QLTC WHERE matc = "+str(matc)+""
         thucung.db.update(sql)
     
-    def hienthi(self):
+    def hienthi():
         sql = "SELECT * FROM QLTC"
         return thucung.db.hienthi(sql)
     
@@ -39,6 +40,9 @@ class thucung:
     def timkiemgiong(giong):
         sql = "SELECT * FROM QLTC WHERE giong LIKE '%"+str(giong)+"%';"
         return thucung.db.hienthi(sql)
+    
+    
+
     
     
 

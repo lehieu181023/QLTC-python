@@ -9,15 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QTableWidgetItem 
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SaveClass')))
 from classtc import thucung
 
-class Ui_MainWindowtc(object):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1303, 734)
+        MainWindow.resize(1130, 709)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -33,19 +34,13 @@ class Ui_MainWindowtc(object):
         self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_2.setObjectName("line_2")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(230, 70, 761, 151))
+        self.groupBox.setGeometry(QtCore.QRect(230, 70, 761, 121))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.groupBox.setFont(font)
         self.groupBox.setObjectName("groupBox")
-        self.label_3 = QtWidgets.QLabel(self.groupBox)
-        self.label_3.setGeometry(QtCore.QRect(10, 30, 131, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.groupBox)
-        self.label_4.setGeometry(QtCore.QRect(10, 70, 131, 31))
+        self.label_4.setGeometry(QtCore.QRect(10, 30, 131, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_4.setFont(font)
@@ -68,20 +63,14 @@ class Ui_MainWindowtc(object):
         font.setPointSize(10)
         self.tb_t.setFont(font)
         self.tb_t.setObjectName("tb_t")
-        self.tb_m = QtWidgets.QLineEdit(self.groupBox)
-        self.tb_m.setGeometry(QtCore.QRect(160, 30, 201, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.tb_m.setFont(font)
-        self.tb_m.setObjectName("tb_m")
         self.label_5 = QtWidgets.QLabel(self.groupBox)
-        self.label_5.setGeometry(QtCore.QRect(10, 110, 141, 31))
+        self.label_5.setGeometry(QtCore.QRect(10, 70, 141, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.cb_l = QtWidgets.QComboBox(self.groupBox)
-        self.cb_l.setGeometry(QtCore.QRect(160, 70, 201, 31))
+        self.cb_l.setGeometry(QtCore.QRect(160, 30, 201, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.cb_l.setFont(font)
@@ -97,7 +86,7 @@ class Ui_MainWindowtc(object):
         self.cb_gt.addItem("")
         self.cb_gt.addItem("")
         self.cb_g = QtWidgets.QComboBox(self.groupBox)
-        self.cb_g.setGeometry(QtCore.QRect(160, 110, 201, 31))
+        self.cb_g.setGeometry(QtCore.QRect(160, 70, 201, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.cb_g.setFont(font)
@@ -115,7 +104,7 @@ class Ui_MainWindowtc(object):
         self.cb_g.addItem("")
         self.cb_g.addItem("")
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(90, 250, 391, 121))
+        self.groupBox_2.setGeometry(QtCore.QRect(10, 200, 261, 121))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.groupBox_2.setFont(font)
@@ -127,19 +116,13 @@ class Ui_MainWindowtc(object):
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.ck_dt = QtWidgets.QCheckBox(self.groupBox_2)
-        self.ck_dt.setGeometry(QtCore.QRect(130, 40, 161, 31))
+        self.ck_dt.setGeometry(QtCore.QRect(120, 50, 161, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.ck_dt.setFont(font)
         self.ck_dt.setObjectName("ck_dt")
-        self.ck_ct = QtWidgets.QCheckBox(self.groupBox_2)
-        self.ck_ct.setGeometry(QtCore.QRect(130, 70, 181, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.ck_ct.setFont(font)
-        self.ck_ct.setObjectName("ck_ct")
         self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_3.setGeometry(QtCore.QRect(530, 250, 401, 121))
+        self.groupBox_3.setGeometry(QtCore.QRect(280, 210, 291, 111))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.groupBox_3.setFont(font)
@@ -154,7 +137,7 @@ class Ui_MainWindowtc(object):
         self.tb_gb.setGeometry(QtCore.QRect(90, 40, 191, 31))
         self.tb_gb.setObjectName("tb_gb")
         self.groupBox_4 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_4.setGeometry(QtCore.QRect(990, 70, 291, 221))
+        self.groupBox_4.setGeometry(QtCore.QRect(850, 200, 261, 161))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.groupBox_4.setFont(font)
@@ -166,34 +149,34 @@ class Ui_MainWindowtc(object):
         self.label_14.setFont(font)
         self.label_14.setObjectName("label_14")
         self.tb_tk = QtWidgets.QLineEdit(self.groupBox_4)
-        self.tb_tk.setGeometry(QtCore.QRect(140, 70, 151, 31))
+        self.tb_tk.setGeometry(QtCore.QRect(100, 70, 151, 31))
         self.tb_tk.setObjectName("tb_tk")
         self.bt_tk = QtWidgets.QPushButton(self.groupBox_4)
-        self.bt_tk.setGeometry(QtCore.QRect(80, 150, 121, 41))
+        self.bt_tk.setGeometry(QtCore.QRect(80, 120, 121, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.bt_tk.setFont(font)
         self.bt_tk.setObjectName("bt_tk")
         self.bt_t = QtWidgets.QPushButton(self.centralwidget)
-        self.bt_t.setGeometry(QtCore.QRect(940, 380, 131, 41))
+        self.bt_t.setGeometry(QtCore.QRect(580, 220, 131, 41))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.bt_t.setFont(font)
         self.bt_t.setObjectName("bt_t")
         self.bt_s = QtWidgets.QPushButton(self.centralwidget)
-        self.bt_s.setGeometry(QtCore.QRect(940, 430, 131, 41))
+        self.bt_s.setGeometry(QtCore.QRect(580, 280, 131, 41))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.bt_s.setFont(font)
         self.bt_s.setObjectName("bt_s")
         self.bt_x = QtWidgets.QPushButton(self.centralwidget)
-        self.bt_x.setGeometry(QtCore.QRect(940, 480, 131, 41))
+        self.bt_x.setGeometry(QtCore.QRect(720, 220, 131, 41))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.bt_x.setFont(font)
         self.bt_x.setObjectName("bt_x")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
-        self.tableWidget.setGeometry(QtCore.QRect(10, 380, 921, 301))
+        self.tableWidget.setGeometry(QtCore.QRect(10, 360, 921, 301))
         self.tableWidget.setRowCount(0)
         self.tableWidget.setColumnCount(7)
         self.tableWidget.setObjectName("tableWidget")
@@ -215,18 +198,18 @@ class Ui_MainWindowtc(object):
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setHighlightSections(True)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(0, 0, 221, 241))
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 211, 191))
         self.pushButton.setStyleSheet("border-image: url(:/logo/Pet Haven.png);")
         self.pushButton.setText("")
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(1130, 490, 171, 191))
+        self.pushButton_2.setGeometry(QtCore.QRect(940, 360, 171, 191))
         self.pushButton_2.setStyleSheet("border-image: url(:/logo/animals.png);")
         self.pushButton_2.setText("")
         self.pushButton_2.setObjectName("pushButton_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1303, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1130, 21))
         self.menubar.setObjectName("menubar")
         self.menuCh_c_n_ng = QtWidgets.QMenu(self.menubar)
         self.menuCh_c_n_ng.setObjectName("menuCh_c_n_ng")
@@ -255,13 +238,16 @@ class Ui_MainWindowtc(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         self.bt_tk.clicked.connect(self.tk)
         self.bt_t.clicked.connect(self.them)
+        self.bt_s.clicked.connect(self.sua)
+        self.bt_x.clicked.connect(self.xoa)
+        self.tableWidget.cellClicked.connect(self.cellclick)
+        self.hienthi()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Quản Lý Thú Cưng"))
         self.groupBox.setTitle(_translate("MainWindow", "Thêm Thú Cưng"))
-        self.label_3.setText(_translate("MainWindow", "Mã thú cưng:"))
         self.label_4.setText(_translate("MainWindow", "Loại thú cưng:"))
         self.label_6.setText(_translate("MainWindow", "Tuổi thú cưng:"))
         self.label_7.setText(_translate("MainWindow", "Giới tính:"))
@@ -285,11 +271,10 @@ class Ui_MainWindowtc(object):
         self.groupBox_2.setTitle(_translate("MainWindow", "Lịch Sử Y Tế"))
         self.label_2.setText(_translate("MainWindow", "Tiêm phòng:"))
         self.ck_dt.setText(_translate("MainWindow", "Đã tiêm phòng"))
-        self.ck_ct.setText(_translate("MainWindow", "Chưa tiêm phòng"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Chi Phí"))
         self.label_13.setText(_translate("MainWindow", "Giá bán:"))
         self.groupBox_4.setTitle(_translate("MainWindow", "Tìm Kiếm"))
-        self.label_14.setText(_translate("MainWindow", "Mã thú cưng:"))
+        self.label_14.setText(_translate("MainWindow", "Tìm kiếm :"))
         self.bt_tk.setText(_translate("MainWindow", "Tìm kiếm"))
         self.bt_t.setText(_translate("MainWindow", "Thêm"))
         self.bt_s.setText(_translate("MainWindow", "Sửa"))
@@ -314,32 +299,96 @@ class Ui_MainWindowtc(object):
         self.cn_qltc.setText(_translate("MainWindow", "QL Thu cung"))
         self.cn_qldh.setText(_translate("MainWindow", "QL Don hang"))
         self.cn_qltk.setText(_translate("MainWindow", "QL Tai khoan"))
-    def tk(self):
-        print("noi dung tim kiem: ",self.tb_tk.text())   
-        nd = self.tb_tk.text()
-        halo=QtWidgets.QMessageBox()
-        halo.setInformativeText(f'noi dung tim kiem: {nd}')
-        halo.exec()
         
+    def tk(self):
+        tk = self.tb_tk.text()
+        tc = thucung
+        try:
+            tk = int(tk)
+        except:
+            pass
+        if isinstance(tk, int):         
+            self.nhaptable(tc.timkiemma(tk))
+        elif tk == "":
+            self.nhaptable(tc.hienthi())    
+        else:
+            self.nhaptable(tc.timkiemgiong(tk))
+        
+
+    
     def them(self):
         loai = self.cb_l.currentText()
         giong = self.cb_g.currentText()
         tuoi = self.tb_t.text()
         gioitinh = self.cb_gt.currentText()
         gia = self.tb_gb.text()
-        tc = thucung("",tuoi,loai,gioitinh,giong,gia)
+        if(self.ck_dt.isChecked()):
+            tp = "True"
+        else:
+            tp = "False"
+            
+        tc = thucung("",tuoi,loai,gioitinh,giong,gia,tp)
         tc.them()
+        self.hienthi()
+    
+    
+    def sua(self):
+        matc = self.matc
+        loai = self.cb_l.currentText()
+        giong = self.cb_g.currentText()
+        tuoi = self.tb_t.text()
+        gioitinh = self.cb_gt.currentText()
+        gia = self.tb_gb.text()
+        if(self.ck_dt.isChecked()):
+            tp = "True"
+        else:
+            tp = "False"
+            
+        tc = thucung(matc,tuoi,loai,gioitinh,giong,gia,tp)
+        tc.sua()
+        self.hienthi()
         
+    def xoa(self):
+        matc = self.matc
+        tc = thucung
+        tc.xoa(matc)
+        self.hienthi()
+        
+    def hienthi(self):      
+        tc = thucung
+        data = tc.hienthi()
+        self.nhaptable(data)
     
-
+    def nhaptable(self,data):
+        self.tableWidget.setRowCount(0)
+        for row_data in data:
+            row_position = self.tableWidget.rowCount()
+            self.tableWidget.insertRow(row_position)
+            for column_index, cell_data in enumerate(row_data):
+                self.tableWidget.setItem(row_position, column_index, QTableWidgetItem(str(cell_data)))
+        
+    def cellclick(self):
+        row = self.tableWidget.currentRow()
+        self.matc = self.tableWidget.item(row,0).text()
+        self.tb_t.setText(self.tableWidget.item(row,2).text())
+        self.cb_l.setCurrentText(self.tableWidget.item(row,1).text())
+        self.cb_g.setCurrentText(self.tableWidget.item(row,2).text())
+        self.tb_t.setText(self.tableWidget.item(row,3).text())
+        self.cb_gt.setCurrentText(self.tableWidget.item(row,4).text())
+        self.tb_gb.setText(self.tableWidget.item(row,6).text())
+        if(self.tableWidget.item(row,5).text() == "True"):
+            self.ck_dt.setChecked(True)
+        else:
+            self.ck_dt.setChecked(False)
+                
 import logo0_rc
-    
+
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindowtc()
+    ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
