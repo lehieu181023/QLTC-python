@@ -15,7 +15,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SaveClass')))
 from classtc import thucung
 
-class Ui_MainWindow(object):
+class Ui_MainWindowtc(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1130, 709)
@@ -388,7 +388,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowtc()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

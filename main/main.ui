@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>924</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>921</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>924</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCh_c_n_ng">
+    <property name="title">
+     <string>Chức năng</string>
+    </property>
+    <addaction name="actionQL_thu_cung"/>
+    <addaction name="actionQL_nhan_vien"/>
+   </widget>
+   <widget class="QMenu" name="menuTh_ng_k">
+    <property name="title">
+     <string>Thống kê</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTho_t">
+    <property name="title">
+     <string>Thoát</string>
+    </property>
+   </widget>
+   <addaction name="menuCh_c_n_ng"/>
+   <addaction name="menuTh_ng_k"/>
+   <addaction name="menuTho_t"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQL_thu_cung">
+   <property name="text">
+    <string>QL thu cung</string>
+   </property>
+  </action>
+  <action name="actionQL_nhan_vien">
+   <property name="text">
+    <string>QL nhan vien</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
