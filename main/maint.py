@@ -11,11 +11,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 import sys
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLTC')))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Dangnhap')))
 
 from QLTC import Ui_MainWindowtc
-from dangnhap import Ui_MainWindowdn
 
 class Ui_MainWindow(object):
     def window(self,ui_main_window):
@@ -25,11 +24,11 @@ class Ui_MainWindow(object):
         return window
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(759, 487)
+        MainWindow.resize(1074, 696)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 761, 461))
+        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1074, 653))
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
@@ -40,7 +39,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.window(Ui_MainWindowtc))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 759, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1074, 21))
         self.menubar.setObjectName("menubar")
         self.menuCh_c_n_ng = QtWidgets.QMenu(self.menubar)
         self.menuCh_c_n_ng.setObjectName("menuCh_c_n_ng")

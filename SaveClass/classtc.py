@@ -41,6 +41,19 @@ class thucung:
         sql = "SELECT * FROM QLTC WHERE giong LIKE '%"+str(giong)+"%';"
         return thucung.db.hienthi(sql)
     
+    def timkiemnc(loai,giong,tuoi,tp,gt,giat,giad):
+        if (giat == "" and giad == ""):
+            sql = "SELECT * FROM QLTC WHERE loai LIKE '%"+str(loai)+"%' AND giong LIKE '%"+str(giong)+"%' AND tuoi like '%"+str(tuoi)+"%' AND tp like '%"+str(tp)+"%' AND gt like '%"+str(gt)+"%'"
+        elif (giat == "" and giad != ""):
+            sql = "SELECT * FROM QLTC WHERE loai LIKE '%"+str(loai)+"%' AND giong LIKE '%"+str(giong)+"%' AND tuoi like '%"+str(tuoi)+"%' AND tp like '%"+str(tp)+"%' AND gt like '%"+str(gt)+"%' AND gia <= "+str(giad)+""           
+        elif (giat != "" and giad == ""):
+            sql = "SELECT * FROM QLTC WHERE loai LIKE '%"+str(loai)+"%' AND giong LIKE '%"+str(giong)+"%' AND tuoi like '%"+str(tuoi)+"%' AND tp like '%"+str(tp)+"%' AND gt like '%"+str(gt)+"%' AND gia >= "+str(giat)+""
+        else:
+             sql = "SELECT * FROM QLTC WHERE loai LIKE '%"+str(loai)+"%' AND giong LIKE '%"+str(giong)+"%' AND tuoi like '%"+str(tuoi)+"%' AND tp like '%"+str(tp)+"%' AND gt like '%"+str(gt)+"%' AND gia >= "+str(giat)+" AND gia <= "+str(giad)+""
+        return thucung.db.hienthi(sql)   
+
+
+    
     
 
     
