@@ -11,6 +11,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 import sys
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import QCoreApplication, QProcess
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLTC')))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLDH')))
@@ -43,7 +45,6 @@ class Ui_MainWindowm(object):
         ui.setupUi(Form)
         return Form
     def setupUi(self, MainWindow,quyen):
-        self.closing = QtCore.pyqtSignal()
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1074, 696)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -138,14 +139,15 @@ class Ui_MainWindowm(object):
         self.btn_tk.triggered.connect(lambda: self.click(self.mhtk))
         self.btn_timkiem.addAction('Tìm kiếm', lambda: self.click(self.mhtknc))
         self.btn_thongke.addAction('Thống kê', lambda: self.click(self.mhtke))  
-        self.btn_thoat.addAction('Thoát',MainWindow.close)  
-        
-    def closeEvent(self, event):
-        self.closing.emit()  # Emit the closing signal
-        event.accept() 
+        self.btn_thoat.addAction('Thoát',self.reset)  
         
     def click(self,index):
         self.stackedWidget.setCurrentWidget(index)
+        
+    def reset(self):
+        QApplication.instance().quit()
+        QCoreApplication.quit()
+        QProcess.startDetached(sys.executable, sys.argv)
           
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
