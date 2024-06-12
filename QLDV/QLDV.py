@@ -15,7 +15,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SaveClass')))
 from classdv import dichvu
 
-class Ui_MainWindow(object):
+class Ui_MainWindowdv(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1074, 653)
@@ -181,10 +181,10 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.hienthi()
-        self.bt_t.clicked.connect(self.them)
-        self.bt_t_2.clicked.connect(self.sua)
-        self.bt_x.clicked.connect(self.xoa)
-        self.tableWidget.cellClicked.connect(self.cellclick)
+        self.bt_t.clicked.connect(lambda:self.them())
+        self.bt_t_2.clicked.connect(lambda:self.sua())
+        self.bt_x.clicked.connect(lambda:self.xoa())
+        self.tableWidget.cellClicked.connect(lambda:self.cellclick())
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -317,9 +317,6 @@ class Ui_MainWindow(object):
             self.checkBox.setChecked(True)
         elif(self.tableWidget.item(row,4).text() == "Cắt tỉa lông"):
             self.checkBox_2.setChecked(True)
-        
-        
-
         if(self.tableWidget.item(row,5).text() == "Trọn gói"):
             self.checkBox_3.setChecked(True)
             self.checkBox_4.setChecked(True)
@@ -335,7 +332,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowdv()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

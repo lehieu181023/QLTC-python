@@ -145,11 +145,11 @@ class Ui_MainWindowtk(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.hienthi()
-        self.bt_t.clicked.connect(self.them)
-        self.bt_s.clicked.connect(self.sua)
-        self.bt_x.clicked.connect(self.xoa)
-        self.pushButton_2.clicked.connect(self.tk)
-        self.tableWidget.cellClicked.connect(self.cellclick)
+        self.bt_t.clicked.connect(lambda:self.them())
+        self.bt_s.clicked.connect(lambda:self.sua())
+        self.bt_x.clicked.connect(lambda:self.xoa())
+        self.pushButton_2.clicked.connect(lambda:self.tk())
+        self.tableWidget.cellClicked.connect(lambda:self.cellclick())
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

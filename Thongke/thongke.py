@@ -9,9 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QTableWidgetItem 
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SaveClass')))
+from classdh import donhang
 
-
-class Ui_MainWindow(object):
+class Ui_MainWindowtke(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1074, 653)
@@ -69,9 +73,9 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
         self.tableWidget = QtWidgets.QTableWidget(self.frame_3)
-        self.tableWidget.setGeometry(QtCore.QRect(40, 0, 691, 471))
+        self.tableWidget.setGeometry(QtCore.QRect(40, 0, 731, 471))
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(4)
+        self.tableWidget.setColumnCount(7)
         self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
@@ -81,8 +85,14 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(6, item)
         self.layoutWidget = QtWidgets.QWidget(self.frame_3)
-        self.layoutWidget.setGeometry(QtCore.QRect(740, 40, 171, 81))
+        self.layoutWidget.setGeometry(QtCore.QRect(780, 40, 171, 81))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -100,21 +110,27 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.gridLayout.addWidget(self.label_4, 1, 0, 1, 1)
         self.layoutWidget1 = QtWidgets.QWidget(self.frame_3)
-        self.layoutWidget1.setGeometry(QtCore.QRect(910, 40, 161, 81))
+        self.layoutWidget1.setGeometry(QtCore.QRect(950, 40, 121, 81))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.layoutWidget1)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.lb_sotc = QtWidgets.QLabel(self.layoutWidget1)
         font = QtGui.QFont()
+        font.setFamily("Arial")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.lb_sotc.setFont(font)
         self.lb_sotc.setText("")
         self.lb_sotc.setObjectName("lb_sotc")
         self.gridLayout_2.addWidget(self.lb_sotc, 0, 0, 1, 1)
         self.lb_tdt = QtWidgets.QLabel(self.layoutWidget1)
         font = QtGui.QFont()
+        font.setFamily("Arial")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.lb_tdt.setFont(font)
         self.lb_tdt.setText("")
         self.lb_tdt.setObjectName("lb_tdt")
@@ -135,6 +151,28 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        
+        self.bt_tk.clicked.connect(lambda:self.hienthi())
+        
+        
+    def hienthi(self):      
+        dh = donhang
+        data = dh.hienthi(self.dt_t.text(),self.dt_d.text())
+        sotc = len(data)
+        tongtien = 0
+        for i in range(sotc):
+            tongtien = tongtien + int(data[i][6])
+        self.lb_sotc.setText(str(sotc))
+        self.lb_tdt.setText(str(tongtien)+" VND")
+        self.nhaptable(data)
+    
+    def nhaptable(self,data):
+        self.tableWidget.setRowCount(0)
+        for row_data in data:
+            row_position = self.tableWidget.rowCount()
+            self.tableWidget.insertRow(row_position)
+            for column_index, cell_data in enumerate(row_data):
+                self.tableWidget.setItem(row_position, column_index, QTableWidgetItem(str(cell_data)))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -144,13 +182,19 @@ class Ui_MainWindow(object):
         self.dt_d.setDisplayFormat(_translate("MainWindow", "yyyy-M-d"))
         self.dt_t.setDisplayFormat(_translate("MainWindow", "yyyy-M-d"))
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "Ngày bán"))
+        item.setText(_translate("MainWindow", "Mã đơn hàng"))
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Mã thú cưng"))
         item = self.tableWidget.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Giống thú cưng"))
+        item.setText(_translate("MainWindow", "CCCD"))
         item = self.tableWidget.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "Giá bán"))
+        item.setText(_translate("MainWindow", "Họ và tên"))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "SDT"))
+        item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "Ngày bán"))
+        item = self.tableWidget.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "Thành tiền"))
         self.label_2.setText(_translate("MainWindow", "Số thú cưng được bán :"))
         self.label_4.setText(_translate("MainWindow", "Tổng doanh thu :"))
 import bg
@@ -160,7 +204,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindowtke()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

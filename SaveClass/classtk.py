@@ -34,6 +34,14 @@ class taikhoan:
         sql = "SELECT * FROM QLTK WHERE TK LIKE '%"+str(tdn)+"%';"
         return taikhoan.db.hienthi(sql)
     
+    def dmk(self):
+        sql = "UPDATE QLTK SET MK = '"+str(self.mk)+"'WHERE TK = '"+str(self.tk)+"'"
+        taikhoan.db.update(sql)
+    def gettk(tk):
+        sql = "SELECT * FROM QLTK WHERE TK = '"+str(tk)+"';"
+        return taikhoan.db.hienthi(sql)
+    
+    
     
 
     

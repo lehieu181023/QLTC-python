@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>978</width>
-    <height>611</height>
+    <width>1074</width>
+    <height>653</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -75,7 +75,7 @@
      <rect>
       <x>150</x>
       <y>80</y>
-      <width>781</width>
+      <width>921</width>
       <height>181</height>
      </rect>
     </property>
@@ -87,245 +87,200 @@
     <property name="title">
      <string>Thêm nhân viên</string>
     </property>
-    <widget class="QLabel" name="label_4">
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>30</y>
+       <width>211</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QComboBox" name="cb_vt">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Nhân viên</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Quản lý</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Thu ngân</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QComboBox" name="cb_gtnv">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Nam</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nữ</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QComboBox" name="cb_ca">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Sáng</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tối</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>30</y>
+       <width>121</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Vai trò :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Giới tính :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ca làm :</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>40</y>
-       <width>131</width>
-       <height>31</height>
+       <width>111</width>
+       <height>81</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Mã nhân viên :</string>
-     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Số điện thoại :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Email :</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>390</x>
+       <x>130</x>
        <y>40</y>
-       <width>131</width>
-       <height>31</height>
+       <width>191</width>
+       <height>81</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Vai trò :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>80</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Số điện thoại :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>390</x>
-       <y>80</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Giới tính :</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="tb_sdt">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>80</y>
-       <width>201</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="tb_mnv">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>40</y>
-       <width>201</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="cb_vt">
-     <property name="geometry">
-      <rect>
-       <x>540</x>
-       <y>40</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>Nhân viên</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Quản lý</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Thu ngân</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="cb_gtnv">
-     <property name="geometry">
-      <rect>
-       <x>540</x>
-       <y>80</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>Nam</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Nữ</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>120</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Email :</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="tb_em">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>120</y>
-       <width>201</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>390</x>
-       <y>120</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Ca làm :</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="cb_ca">
-     <property name="geometry">
-      <rect>
-       <x>540</x>
-       <y>120</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>Sáng</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tối</string>
-      </property>
-     </item>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="tb_sdt">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="tb_em">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>260</y>
+      <x>760</x>
+      <y>250</y>
       <width>311</width>
       <height>141</height>
      </rect>
@@ -390,8 +345,8 @@
      <rect>
       <x>20</x>
       <y>270</y>
-      <width>611</width>
-      <height>281</height>
+      <width>731</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="rowCount">
@@ -443,8 +398,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>410</y>
+      <x>940</x>
+      <y>470</y>
       <width>131</width>
       <height>141</height>
      </rect>
@@ -462,59 +417,53 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_t">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>410</y>
-      <width>101</width>
-      <height>41</height>
+      <x>760</x>
+      <y>400</y>
+      <width>151</width>
+      <height>211</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Thêm</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_s">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>460</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Sửa</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_x">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>510</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Xóa</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="bt_t">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Thêm</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="bt_s">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sửa</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="bt_x">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Xóa</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -522,7 +471,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>978</width>
+     <width>1074</width>
      <height>21</height>
     </rect>
    </property>
@@ -530,7 +479,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="C:/Users/Viet Anh/Downloads/111/jpg1.qrc"/>
+  <include location="jpg1.qrc"/>
  </resources>
  <connections/>
 </ui>

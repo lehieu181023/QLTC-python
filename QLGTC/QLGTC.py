@@ -166,12 +166,12 @@ class Ui_QL_GTC(object):
         self.retranslateUi(QL_GTC)
         QtCore.QMetaObject.connectSlotsByName(QL_GTC)
         
-        self.pushButton_4.clicked.connect(self.tk)
-        self.btn_t.clicked.connect(self.them)
-        self.by_s.clicked.connect(self.sua)
-        self.bt_x.clicked.connect(self.xoa)
-        self.btn_h.clicked.connect(self.huy)
-        self.tableWidget.cellClicked.connect(self.cellclick)
+        self.pushButton_4.clicked.connect(lambda:self.tk())
+        self.btn_t.clicked.connect(lambda:self.them())
+        self.by_s.clicked.connect(lambda:self.sua())
+        self.bt_x.clicked.connect(lambda:self.xoa())
+        self.btn_h.clicked.connect(lambda:self.huy())
+        self.tableWidget.cellClicked.connect(lambda:self.cellclick())
         self.hienthi()
 
     def retranslateUi(self, QL_GTC):

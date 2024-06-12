@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>728</width>
-    <height>485</height>
+    <height>441</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,12 +19,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>421</width>
+      <width>371</width>
       <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/bgr/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg);</string>
+     <string notr="true">border-image: url(:/bgr/pet haven (1).png);</string>
     </property>
     <property name="title">
      <string/>
@@ -33,9 +33,9 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>380</x>
       <y>0</y>
-      <width>301</width>
+      <width>351</width>
       <height>441</height>
      </rect>
     </property>
@@ -43,13 +43,13 @@
      <string notr="true"/>
     </property>
     <property name="title">
-     <string>Đăng nhập</string>
+     <string/>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>90</y>
+       <x>90</x>
+       <y>80</y>
        <width>181</width>
        <height>41</height>
       </rect>
@@ -66,69 +66,31 @@
       <string>ĐĂNG NHẬP</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>150</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Tài khoản:</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="tb_tk">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>150</y>
-       <width>171</width>
+       <x>160</x>
+       <y>130</y>
+       <width>161</width>
        <height>31</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>200</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Mật khẩu :</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="tb_mk">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>200</y>
-       <width>171</width>
+       <x>160</x>
+       <y>180</y>
+       <width>161</width>
        <height>31</height>
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btn_dn">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>260</y>
+       <x>50</x>
+       <y>280</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -137,40 +99,113 @@
       <string>ĐĂNG NHẬP</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="btn_dmk">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>280</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ĐỔI MẬT KHẨU</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>230</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_huy">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>330</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Hủy</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>131</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tài khoản:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Nhập Lại mật khẩu:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>183</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mật khẩu :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>728</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuCh_c_n_ng">
-    <property name="title">
-     <string>Chức năng</string>
-    </property>
-    <addaction name="separator"/>
-    <addaction name="actionQL_thu_cung"/>
-    <addaction name="actionQL_nhan_vien"/>
-   </widget>
-   <widget class="QMenu" name="menuTh_ng_k">
-    <property name="title">
-     <string>Thống kê</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuTho_t">
-    <property name="title">
-     <string>Thoát</string>
-    </property>
-   </widget>
-   <addaction name="menuCh_c_n_ng"/>
-   <addaction name="menuTh_ng_k"/>
-   <addaction name="menuTho_t"/>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionQL_thu_cung">
    <property name="text">
     <string>QL thu cung</string>
