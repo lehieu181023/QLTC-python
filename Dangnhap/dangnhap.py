@@ -10,6 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QLineEdit 
+from PyQt5.QtGui import QIcon
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SaveClass')))
@@ -22,6 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(728, 441)
+        MainWindow.setWindowIcon(QIcon("main/PetHaven.png"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
@@ -162,7 +164,7 @@ class Ui_MainWindow(object):
         
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "ĐĂNG NHẬP"))
         self.label.setText(_translate("MainWindow", "ĐĂNG NHẬP"))
         self.btn_dn.setText(_translate("MainWindow", "ĐĂNG NHẬP"))
         self.btn_dmk.setText(_translate("MainWindow", "ĐỔI MẬT KHẨU"))

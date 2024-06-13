@@ -13,6 +13,7 @@ import os
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QCoreApplication, QProcess
+from PyQt5.QtGui import QIcon
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLTC')))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLDH')))
@@ -47,6 +48,7 @@ class Ui_MainWindowm(object):
     def setupUi(self, MainWindow,quyen):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1074, 696)
+        MainWindow.setWindowIcon(QIcon("main/PetHaven.png"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
@@ -151,7 +153,7 @@ class Ui_MainWindowm(object):
           
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Cửa hàng thú cưng Pet Haven HLH"))
         self.menuCh_c_n_ng.setTitle(_translate("MainWindow", "Quản lý"))
         self.menuQL_thu_cung.setTitle(_translate("MainWindow", "QL thu cung"))
         self.btn_thongke.setTitle(_translate("MainWindow", "Thống kê"))

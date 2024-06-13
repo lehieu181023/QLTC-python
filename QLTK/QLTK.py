@@ -109,6 +109,9 @@ class Ui_MainWindowtk(object):
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
+        header = self.tableWidget.horizontalHeader()
+        for i in range(self.tableWidget.columnCount()):
+            header.setSectionResizeMode(i, QtWidgets.QHeaderView.Stretch)
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(920, 0, 151, 141))
         self.pushButton_3.setStyleSheet("border-image: url(:/logo/cool.png);")
