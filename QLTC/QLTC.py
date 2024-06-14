@@ -259,7 +259,7 @@ class Ui_MainWindowtc(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
-        self.bt_tk.clicked.connect(lambda:self.tknc())
+        self.bt_tk.clicked.connect(lambda:self.tk())
         self.bt_t.clicked.connect(lambda:self.them())
         self.bt_s.clicked.connect(lambda:self.sua())
         self.bt_x.clicked.connect(lambda:self.xoa())
@@ -337,11 +337,6 @@ class Ui_MainWindowtc(object):
             self.nhaptable(tc.hienthi())    
         else:
             self.nhaptable(tc.timkiemgiong(tk))
-    def tknc(self):
-        tk = self.tb_tk.text()
-        tc = thucung
-        data = tc.timkiemnc("Mèo", "anh", "", "", "","",tk)
-        self.nhaptable(data)
         
     def getgiong(self):
         gtc = giongtc
