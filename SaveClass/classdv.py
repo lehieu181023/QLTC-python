@@ -62,6 +62,10 @@ class dichvu:
         sql = "SELECT * FROM QLDV"
         return dichvu.db.hienthi(sql)
     
+    def hienthithongke(nbd,nkt):
+        sql = "SELECT * FROM QLDV WHERE ngaydk BETWEEN '"+nbd+"' AND '"+nkt+"'"
+        return dichvu.db.hienthi(sql)
+    
     
     
     

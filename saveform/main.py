@@ -11,6 +11,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 import sys
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import QCoreApplication, QProcess
+from PyQt5.QtGui import QIcon
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLTC')))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'QLDH')))
@@ -29,30 +32,29 @@ from QLNV import Ui_MainWindownv
 from QLTK import Ui_MainWindowtk
 from thongke import Ui_MainWindowtke
 from tknc import Ui_MainWindowtknc
+from giaodienc import Ui_Form
 
-
-class Ui_MainWindow(object):
+class Ui_MainWindowm(object):
     def window(self,ui_main_window):
         window = QtWidgets.QMainWindow()
         ui = ui_main_window()
         ui.setupUi(window)
         return window
-    def setupUi(self, MainWindow):
+    def mhc(self,ui_main_window):
+        Form = QtWidgets.QWidget()
+        ui = ui_main_window()
+        ui.setupUi(Form)
+        return Form
+    def setupUi(self, MainWindow,quyen):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1074, 696)
+        MainWindow.setWindowIcon(QIcon("main/PetHaven.png"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
         self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1074, 653))
         self.stackedWidget.setObjectName("stackedWidget")
-        self.stackedWidget.addWidget(self.window(Ui_MainWindowdh))
-        self.stackedWidget.addWidget(self.window(Ui_MainWindowdv))
-        self.stackedWidget.addWidget(self.window(Ui_MainWindowtc))
-        self.stackedWidget.addWidget(self.window(Ui_QL_GTC))
-        self.stackedWidget.addWidget(self.window(Ui_MainWindownv))
-        self.stackedWidget.addWidget(self.window(Ui_MainWindowtk))
-        self.stackedWidget.addWidget(self.window(Ui_MainWindowtknc))
-        self.stackedWidget.addWidget(self.window(Ui_MainWindowtke))
+        self.stackedWidget.addWidget(self.mhc(Ui_Form))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1074, 21))
@@ -61,68 +63,116 @@ class Ui_MainWindow(object):
         self.menuCh_c_n_ng.setObjectName("menuCh_c_n_ng")
         self.menuQL_thu_cung = QtWidgets.QMenu(self.menuCh_c_n_ng)
         self.menuQL_thu_cung.setObjectName("menuQL_thu_cung")
-        self.menuTh_ng_k = QtWidgets.QMenu(self.menubar)
-        self.menuTh_ng_k.setObjectName("menuTh_ng_k")
-        self.menuTho_t = QtWidgets.QMenu(self.menubar)
-        self.menuTho_t.setObjectName("menuTho_t")
+        self.btn_thongke = QtWidgets.QMenu(self.menubar)
+        self.btn_thongke.setObjectName("btn_thongke")
+        self.btn_thoat = QtWidgets.QMenu(self.menubar)
+        self.btn_thoat.setObjectName("btn_thoat")
         self.menuB_n_h_ng = QtWidgets.QMenu(self.menubar)
         self.menuB_n_h_ng.setObjectName("menuB_n_h_ng")
-        self.menuTim_kiem = QtWidgets.QMenu(self.menubar)
-        self.menuTim_kiem.setObjectName("menuTim_kiem")
+        self.btn_timkiem = QtWidgets.QMenu(self.menubar)
+        self.btn_timkiem.setObjectName("btn_timkiem")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.actionQL_nhan_vien = QtWidgets.QAction(MainWindow)
-        self.actionQL_nhan_vien.setObjectName("actionQL_nhan_vien")
-        self.actionThu_cung = QtWidgets.QAction(MainWindow)
-        self.actionThu_cung.setObjectName("actionThu_cung")
-        self.actionGiong_thu_cung = QtWidgets.QAction(MainWindow)
-        self.actionGiong_thu_cung.setObjectName("actionGiong_thu_cung")
-        self.actionBan_thu_cung = QtWidgets.QAction(MainWindow)
-        self.actionBan_thu_cung.setObjectName("actionBan_thu_cung")
-        self.actionDich_vu = QtWidgets.QAction(MainWindow)
-        self.actionDich_vu.setObjectName("actionDich_vu")
-        self.actionQL_tai_khoan = QtWidgets.QAction(MainWindow)
-        self.actionQL_tai_khoan.setObjectName("actionQL_tai_khoan")
-        self.menuQL_thu_cung.addAction(self.actionThu_cung)
-        self.menuQL_thu_cung.addAction(self.actionGiong_thu_cung)
+        self.btn_nv = QtWidgets.QAction(MainWindow)
+        self.btn_nv.setObjectName("btn_nv")
+        self.btn_tc = QtWidgets.QAction(MainWindow)
+        self.btn_tc.setObjectName("btn_tc")
+        self.btn_gtc = QtWidgets.QAction(MainWindow)
+        self.btn_gtc.setObjectName("btn_gtc")
+        self.btn_bantc = QtWidgets.QAction(MainWindow)
+        self.btn_bantc.setObjectName("btn_bantc")
+        self.btn_dv = QtWidgets.QAction(MainWindow)
+        self.btn_dv.setObjectName("btn_dv")
+        self.btn_tk = QtWidgets.QAction(MainWindow)
+        self.btn_tk.setObjectName("btn_tk")
+        self.menuQL_thu_cung.addAction(self.btn_tc)
+        self.menuQL_thu_cung.addAction(self.btn_gtc)
         self.menuCh_c_n_ng.addAction(self.menuQL_thu_cung.menuAction())
-        self.menuCh_c_n_ng.addAction(self.actionQL_nhan_vien)
-        self.menuCh_c_n_ng.addAction(self.actionQL_tai_khoan)
-        self.menuB_n_h_ng.addAction(self.actionBan_thu_cung)
-        self.menuB_n_h_ng.addAction(self.actionDich_vu)
+        self.menuCh_c_n_ng.addAction(self.btn_nv)
+        self.menuCh_c_n_ng.addAction(self.btn_tk)
+        self.menuB_n_h_ng.addAction(self.btn_bantc)
+        self.menuB_n_h_ng.addAction(self.btn_dv)
         self.menubar.addAction(self.menuB_n_h_ng.menuAction())
         self.menubar.addAction(self.menuCh_c_n_ng.menuAction())
-        self.menubar.addAction(self.menuTim_kiem.menuAction())
-        self.menubar.addAction(self.menuTh_ng_k.menuAction())
-        self.menubar.addAction(self.menuTho_t.menuAction())
+        self.menubar.addAction(self.btn_timkiem.menuAction())
+        self.menubar.addAction(self.btn_thongke.menuAction())
+        self.menubar.addAction(self.btn_thoat.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        
+        self.mhdonhang = self.window(Ui_MainWindowdh)
+        self.mhdichvu = self.window(Ui_MainWindowdv)
+        self.mhqltc = self.window(Ui_MainWindowtc)
+        self.mhgtc = self.window(Ui_QL_GTC)
+        self.mhnv = self.window(Ui_MainWindownv)
+        self.mhtk = self.window(Ui_MainWindowtk)
+        self.mhtknc = self.window(Ui_MainWindowtknc)
+        self.mhtke = self.window(Ui_MainWindowtke)
+        if(quyen == "Quản lý"):
+            self.stackedWidget.addWidget(self.mhdonhang)
+            self.stackedWidget.addWidget(self.mhdichvu)
+            self.stackedWidget.addWidget(self.mhqltc)
+            self.stackedWidget.addWidget(self.mhgtc)
+            self.stackedWidget.addWidget(self.mhnv)
+            self.stackedWidget.addWidget(self.mhtk)
+            self.stackedWidget.addWidget(self.mhtknc)
+            self.stackedWidget.addWidget(self.mhtke)
+        elif(quyen == "Kế toán"):
+            self.stackedWidget.addWidget(self.mhtke)
+            self.stackedWidget.addWidget(self.mhtknc)
+            self.menubar.removeAction(self.menuB_n_h_ng.menuAction())  
+            self.menubar.removeAction(self.menuCh_c_n_ng.menuAction()) 
+        else:
+            self.stackedWidget.addWidget(self.mhdonhang)
+            self.stackedWidget.addWidget(self.mhdichvu)
+            self.stackedWidget.addWidget(self.mhtknc)
+            self.menubar.removeAction(self.menuCh_c_n_ng.menuAction()) 
+            self.menubar.removeAction(self.btn_thongke.menuAction()) 
+            
+        self.stackedWidget.setCurrentIndex(0)
+        self.btn_bantc.triggered.connect(lambda: self.click(self.mhdonhang))
+        self.btn_dv.triggered.connect(lambda: self.click(self.mhdichvu))
+        self.btn_tc.triggered.connect(lambda: self.click(self.mhqltc))
+        self.btn_gtc.triggered.connect(lambda: self.click(self.mhgtc))
+        self.btn_nv.triggered.connect(lambda: self.click(self.mhnv))
+        self.btn_tk.triggered.connect(lambda: self.click(self.mhtk))
+        self.btn_timkiem.addAction('Tìm kiếm', lambda: self.click(self.mhtknc))
+        self.btn_thongke.addAction('Thống kê', lambda: self.click(self.mhtke))  
+        self.btn_thoat.addAction('Thoát',self.reset)  
+        
+    def click(self,index):
+        self.stackedWidget.setCurrentWidget(index)
+        
+    def reset(self):
+        QApplication.instance().quit()
+        QCoreApplication.quit()
+        QProcess.startDetached(sys.executable, sys.argv)
+          
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Cửa hàng thú cưng Pet Haven HLH"))
         self.menuCh_c_n_ng.setTitle(_translate("MainWindow", "Quản lý"))
         self.menuQL_thu_cung.setTitle(_translate("MainWindow", "QL thu cung"))
-        self.menuTh_ng_k.setTitle(_translate("MainWindow", "Thống kê"))
-        self.menuTho_t.setTitle(_translate("MainWindow", "Thoát"))
+        self.btn_thongke.setTitle(_translate("MainWindow", "Thống kê"))
+        self.btn_thoat.setTitle(_translate("MainWindow", "Thoát"))
         self.menuB_n_h_ng.setTitle(_translate("MainWindow", "Bán hàng"))
-        self.menuTim_kiem.setTitle(_translate("MainWindow", "Tìm kiếm"))
-        self.actionQL_nhan_vien.setText(_translate("MainWindow", "QL nhan vien"))
-        self.actionThu_cung.setText(_translate("MainWindow", "Thu cung"))
-        self.actionGiong_thu_cung.setText(_translate("MainWindow", "Giong thu cung"))
-        self.actionBan_thu_cung.setText(_translate("MainWindow", "Ban thu cung"))
-        self.actionDich_vu.setText(_translate("MainWindow", "Dich vu"))
-        self.actionQL_tai_khoan.setText(_translate("MainWindow", "QL tai khoan"))
-        
+        self.btn_timkiem.setTitle(_translate("MainWindow", "Tìm kiếm"))
+        self.btn_nv.setText(_translate("MainWindow", "QL nhân viên"))
+        self.btn_tc.setText(_translate("MainWindow", "Thú cưng"))
+        self.btn_gtc.setText(_translate("MainWindow", "Giống thú cưng"))
+        self.btn_bantc.setText(_translate("MainWindow", "Bán thú cưng"))
+        self.btn_dv.setText(_translate("MainWindow", "Dịch vụ"))
+        self.btn_tk.setText(_translate("MainWindow", "QL tài khoản"))
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
+    ui = Ui_MainWindowm()
+    ui.setupUi(MainWindow,"nhan")
     MainWindow.show()
     sys.exit(app.exec_())
