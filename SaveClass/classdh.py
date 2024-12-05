@@ -23,7 +23,7 @@ class donhang:
         
     
     def hienthi(ngayt,ngayd):
-        sql = "SELECT madh,QLDH.matc,CCCD,ht,SDT,ngayban,QLTC.gia as tongtien FROM QLDH INNER JOIN QLTC ON QLTC.matc = QLDH.matc WHERE ngayban BETWEEN '"+ngayt+"' AND '"+ngayd+"'"
+        sql = "SELECT madh,QLDH.matc,CCCD,ht,SDT,ngayban,QLTC.gia as tongtien FROM QLDH INNER JOIN QLTC ON QLTC.matc = QLDH.matc WHERE QLTC.giong = 'Chó' AND  ngayban BETWEEN '"+ngayt+"' AND '"+ngayd+"' "
         return donhang.db.hienthi(sql)
 
     
